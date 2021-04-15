@@ -46,6 +46,7 @@ function Animal(name, species, food) {
 
 //Code Here
 let animal1 = new Animal ('Blue', 'Occamy', 'other animals');
+
 ////////// PROBLEM 3 //////////
 
 /*
@@ -63,7 +64,7 @@ let who = {
 }
 
 //Code Here
-let whoSaysHi = sayHi.call (who);
+let whoSaysHi = sayHi.bind (who);
 ////////// PROBLEM 4 //////////
 
 /*
