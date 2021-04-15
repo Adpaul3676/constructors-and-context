@@ -19,6 +19,7 @@
 
 //Code Here
 let user = {
+  name: 'adam',
   username: 'dinraal',
   email: 'adam@gmail.com',
   getUsername: function () {
@@ -62,7 +63,7 @@ let who = {
 }
 
 //Code Here
-const whoSaysHi = sayHi.call (who, this.name)
+let whoSaysHi = sayHi.call (who);
 ////////// PROBLEM 4 //////////
 
 /*
@@ -74,7 +75,7 @@ function whatIsThis() {
 }
 
 // uncomment the line below and tell us what the context of "this" is for whatIsThis()
-let context1 = whatIsThis.call (product);
+let context1 = whatIsThis.call ();
 
 let product = {
   name: 'snake plant',
@@ -86,7 +87,7 @@ let product = {
 let func = whatIsThis.bind(product)
 
 // uncomment the line below and tell us what the context of "this" is when we invoke func
-// let context2 = 
+let context2 = whatIsThis.call (product)
 
 let vacation = {
   location: 'Hawaii',
@@ -97,7 +98,7 @@ let vacation = {
 }
 
 // uncomment the line below and tell us what the context of "this" is when we invoke vacation.whatIsThis
-//let context3 = ???
+let context3 = whatIsThis.call (vacation)
 
 function Family(numParents, numKids, numPets) {
   this.numParents = numParents
@@ -112,4 +113,4 @@ function Family(numParents, numKids, numPets) {
 let family1 = new Family(2, 4, 1)
 
 // uncomment the line below and tell us what the context of "this" is for the instance of Family created above.
-// let context4 = ???
+let context4 = whatIsThis.call (family1)
